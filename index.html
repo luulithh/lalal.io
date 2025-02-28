@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+    <title>Полноэкранное приложение</title>
+</head>
+<body>
+    <h1>Добро пожаловать в Sbewo!</h1>
+    <p>Это мини-приложение, которое должно открыться на весь экран!</p>
+
+    <button id="expandButton">Развернуть на весь экран</button>
+
+    <script>
+        document.getElementById('expandButton').addEventListener('click', function() {
+            if (window.Telegram && Telegram.WebApp) {
+                Telegram.WebApp.expand();  // Разворачиваем WebApp на весь экран по нажатию
+            }
+        });
+    </script>
+</body>
+</html>
